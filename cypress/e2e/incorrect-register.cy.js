@@ -1,13 +1,14 @@
-describe('Register on Adopet website', () => {
-  it('Should fill all fields to register a new user', () => {
+describe('Register Page', () => {
+  beforeEach(() => {
     cy.visit('https://adopet-frontend-cypress.vercel.app/');
     cy.get('[data-test="register-button"]').click();
+  });
+
+  it('Should fill all fields incorrectly to register a new user', () => {
     cy.get('[data-test="submit-button"]').click();
 
     cy.contains('É necessário informar um endereço de email').should('be.visible');
     cy.contains('Crie uma senha').should('be.visible');
     cy.contains('Repita a senha criada acima').should('be.visible');
-
-
   })
 })
