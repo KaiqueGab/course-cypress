@@ -8,10 +8,18 @@ describe('Pagina de Login', () => {
         cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
         cy.get('[data-test="input-loginPassword"]').type('Senha123');
         cy.get('[data-test="submit-button"]').click();
-    });
-
-    afterEach(() => {
+        
         cy.url().should('eq', 'https://adopet-frontend-cypress.vercel.app/home');
     });
 
+
+    it('Deve ser capaz de fazer login pelo caminho alternativo', () => {
+        cy.get('.header__message').click();
+
+        cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
+        cy.get('[data-test="input-loginPassword"]').type('Senha123');
+        cy.get('[data-test="submit-button"]').click();
+
+        cy.url().should('be.equal', 'https://adopet-frontend-cypress.vercel.app/home');
+    });
 });
