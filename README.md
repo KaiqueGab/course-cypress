@@ -1,4 +1,4 @@
-## Função: Cadastro no site Adopet
+## Funcionalidade: Cadastro no site Adopet
 
 ### Cenário: Cadastro de Usuário Bem-Sucedido (Caminho Feliz)
 
@@ -32,9 +32,9 @@
 
 ========================================
 
-Funcionalidade: Login no site Adopet
+## Funcionalidade: Login no site Adopet
 
-Cenário: Login no sistema com sucesso
+### Cenário: Login no sistema com sucesso
 
 Passos:
 1. O usuário acessa a pagina de login
@@ -47,9 +47,7 @@ Resultado Esperado:
 
 ---
 
-Funcionalidade: Falha no login no site Adopet
-
-Cenário: Login no sistema com sucesso
+### Cenário: Login no sistema sem suceesso
 
 Passos:
 1. O usuário acessa a pagina de login
